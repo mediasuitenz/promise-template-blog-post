@@ -13,6 +13,16 @@ module.exports = function(app) {
       id: 2,
       name: 'Frederik Pohl',
       books: [3]
+    },
+    {
+      id: 3,
+      name: 'Neal Stephenson',
+      books: [4, 5]
+    },
+    {
+      id: 4,
+      name: 'Vernor Vinge',
+      books: [6, 7]
     }
   ]
 

@@ -21,6 +21,30 @@ module.exports = function(app) {
       title: 'Gateway',
       year: 1977,
       author: 2
+    },
+    {
+      id: 4,
+      title: 'Seveneves',
+      year: 2015,
+      author: 3
+    },
+    {
+      id: 5,
+      title: 'Snow Crash',
+      year: 1992,
+      author: 3
+    },
+    {
+      id: 6,
+      title: 'A Fire Upon the Deep',
+      year: 1992,
+      author: 4
+    },
+    {
+      id: 7,
+      title: 'A Deepness in the Sky',
+      year: 1999,
+      author: 4
     }
   ]
 
