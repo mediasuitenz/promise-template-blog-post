@@ -1,14 +1,16 @@
 import DS from 'ember-data';
+import Ember from 'ember';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
   books: DS.hasMany('book'),
-  hasPublishedRecently: function () {
-    return this.get('books').then(books => {
+  // Have any of their books been published in the last two years.
+  hasPublishedRecentlyPromise: Ember.computed(function () {
+    const promise = this.get('books').then(books => {
       const currentYear = new Date().getFullYear();
       const years = books.map(b => b.get('year'));
-      // Are any of their books written in the last two years.
-      return years.some(y => (y - 2) >= currentYear);
+      return years.some(y => y >= currentYear - 2);
     });
-  }
+    return DS.PromiseObject.create({promise});
+  })
 });
