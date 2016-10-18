@@ -6,7 +6,8 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   year: DS.attr('number'),
   author: DS.belongsTo('author'),
-  isAvailable: function () {
-    return this.get('librarySystem').isAvailable(this.id);
-  }
+  isAvailablePromise: Ember.computed(function () {
+    const promise = this.get('librarySystem').isAvailable(this.id);
+    return DS.PromiseObject.create({promise});
+  })
 });
