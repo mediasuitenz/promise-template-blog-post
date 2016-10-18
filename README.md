@@ -1,6 +1,6 @@
 # Promise-template-blog-post
 
-This repository is a reference project for how to display promises in templates.
+A reference project for how to display promises in templates.
 
 It displays a pretend library system, with two examples of displaying asynchronous computed properties in the template. See the Author and the Book models for the computed properties and the template for how they're displayed.
 
